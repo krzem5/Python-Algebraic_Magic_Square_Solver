@@ -1,7 +1,3 @@
-import re
-
-
-
 def evl(e):
 	e=e.replace("(+","").replace(" ","").replace("-+","-").replace("+-","-")
 	i=0
