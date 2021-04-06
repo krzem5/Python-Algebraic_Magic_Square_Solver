@@ -79,9 +79,9 @@ def solve(sq,diagonals=False,log_steps=False,log_sum=False):
 	def calc(ts,*args):
 		t=""
 		for k in args:
-			if (k==None):k=0
+			if (k is None):k=0
 			t+="+"+str(k)
-		if (ts==None):return evl(t[1:])
+		if (ts is None):return evl(t[1:])
 		t="-("+t[1:]+")"
 		return evl(ts+t)
 	def idx(a,e):
@@ -124,7 +124,7 @@ def solve(sq,diagonals=False,log_steps=False,log_sum=False):
 		a=get(sq,diagonals,False)
 		s=False
 		for h in a:
-			if (h==None or mv.count(h[1:])>0):continue
+			if (h is None or mv.count(h[1:])>0):continue
 			mv.append(h[1:])
 			h[0].pop(idx(h[0],None))
 			sq[h[1]][h[2]]=calc(ts,*h[0])
